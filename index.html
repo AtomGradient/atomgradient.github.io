@@ -281,6 +281,43 @@
       color: var(--gradient-end);
     }
 
+    /* --- Language Switcher --- */
+    .lang-switcher {
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+      margin-left: 1.5rem;
+      font-size: 0.85rem;
+    }
+
+    .lang-switcher button {
+      background: none;
+      border: none;
+      color: var(--text-secondary);
+      font-size: 0.85rem;
+      font-weight: 500;
+      cursor: pointer;
+      padding: 0.25rem 0.5rem;
+      border-radius: 6px;
+      transition: color 0.2s, background 0.2s;
+      font-family: inherit;
+    }
+
+    .lang-switcher button:hover {
+      color: var(--text);
+    }
+
+    .lang-switcher button.active {
+      color: var(--text);
+      background: rgba(99, 102, 241, 0.15);
+    }
+
+    .lang-switcher .separator {
+      color: var(--text-secondary);
+      opacity: 0.4;
+      user-select: none;
+    }
+
     /* --- Mobile --- */
     @media (max-width: 640px) {
       nav {
@@ -293,6 +330,10 @@
 
       .nav-links a {
         font-size: 0.85rem;
+      }
+
+      .lang-switcher {
+        margin-left: 0.75rem;
       }
 
       section {
@@ -315,70 +356,75 @@
   <nav>
     <a href="https://atomgradient.com/" class="nav-logo">AtomGradient</a>
     <ul class="nav-links">
-      <li><a href="#research">Research</a></li>
-      <li><a href="https://www.echostream-ai.com/" target="_blank" rel="noopener">Products</a></li>
-      <li><a href="#about">About</a></li>
+      <li><a href="#research" data-i18n="nav.research">Research</a></li>
+      <li><a href="https://www.echostream-ai.com/" target="_blank" rel="noopener" data-i18n="nav.products">Products</a></li>
+      <li><a href="#about" data-i18n="nav.about">About</a></li>
       <li><a href="https://github.com/AtomGradient" target="_blank" rel="noopener">GitHub</a></li>
     </ul>
+    <div class="lang-switcher">
+      <button data-lang="en" onclick="setLang('en')">EN</button>
+      <span class="separator">/</span>
+      <button data-lang="zh" onclick="setLang('zh')">中</button>
+    </div>
   </nav>
 
   <!-- Hero -->
   <section class="hero">
     <h1>AtomGradient</h1>
-    <p class="tagline">Bringing AI to the Edge</p>
-    <p class="desc">We focus on deploying AI models directly on consumer devices — making AI faster, private, and freely accessible to everyone.</p>
+    <p class="tagline" data-i18n="hero.tagline">Bringing AI to the Edge</p>
+    <p class="desc" data-i18n="hero.desc">We focus on deploying AI models directly on consumer devices — making AI faster, private, and freely accessible to everyone.</p>
   </section>
 
   <!-- Research -->
   <section id="research">
-    <h2 class="section-title">Research</h2>
+    <h2 class="section-title" data-i18n="nav.research">Research</h2>
     <div class="cards">
 
       <!-- Card 1 -->
       <div class="card">
         <span class="card-label">swift-qwen3-tts</span>
-        <h3>On-Device Text-to-Speech</h3>
-        <p class="card-desc">Native Swift implementation of Qwen3 TTS 0.6B for real-time, on-device speech synthesis.</p>
+        <h3 data-i18n="card1.title">On-Device Text-to-Speech</h3>
+        <p class="card-desc" data-i18n="card1.desc">Native Swift implementation of Qwen3 TTS 0.6B for real-time, on-device speech synthesis.</p>
         <ul class="highlights">
-          <li>67% model compression (2.35 GB → 808 MB)</li>
-          <li>Real-time synthesis (RTF 0.68x)</li>
-          <li>12 languages supported</li>
+          <li data-i18n="card1.h1">67% model compression (2.35 GB → 808 MB)</li>
+          <li data-i18n="card1.h2">Real-time synthesis (RTF 0.68x)</li>
+          <li data-i18n="card1.h3">12 languages supported</li>
         </ul>
         <div class="card-links">
-          <a href="https://github.com/AtomGradient/swift-qwen3-tts" target="_blank" rel="noopener">GitHub →</a>
-          <a href="https://atomgradient.github.io/swift-qwen3-tts/" target="_blank" rel="noopener">Paper →</a>
+          <a href="https://github.com/AtomGradient/swift-qwen3-tts" target="_blank" rel="noopener" data-i18n="link.github">GitHub →</a>
+          <a href="https://atomgradient.github.io/swift-qwen3-tts/" target="_blank" rel="noopener" data-i18n="link.paper">Paper →</a>
         </div>
       </div>
 
       <!-- Card 2 -->
       <div class="card">
         <span class="card-label">Gemma-Prune</span>
-        <h3>On-Device Vision Language Model</h3>
-        <p class="card-desc">Multi-stage compression pipeline for deploying Gemma 3 4B VLM on consumer hardware.</p>
+        <h3 data-i18n="card2.title">On-Device Vision Language Model</h3>
+        <p class="card-desc" data-i18n="card2.desc">Multi-stage compression pipeline for deploying Gemma 3 4B VLM on consumer hardware.</p>
         <ul class="highlights">
-          <li>25% model compression (2.8 GB → 2.1 GB)</li>
-          <li>110 tok/s text generation</li>
-          <li>3.4x image processing speedup</li>
+          <li data-i18n="card2.h1">25% model compression (2.8 GB → 2.1 GB)</li>
+          <li data-i18n="card2.h2">110 tok/s text generation</li>
+          <li data-i18n="card2.h3">3.4x image processing speedup</li>
         </ul>
         <div class="card-links">
-          <a href="https://github.com/AtomGradient/swift-gemma-cli" target="_blank" rel="noopener">GitHub →</a>
-          <a href="https://atomgradient.github.io/swift-gemma-cli/" target="_blank" rel="noopener">Paper →</a>
+          <a href="https://github.com/AtomGradient/swift-gemma-cli" target="_blank" rel="noopener" data-i18n="link.github">GitHub →</a>
+          <a href="https://atomgradient.github.io/swift-gemma-cli/" target="_blank" rel="noopener" data-i18n="link.paper">Paper →</a>
         </div>
       </div>
 
       <!-- Card 3 -->
       <div class="card">
         <span class="card-label">OptMLX</span>
-        <h3>MLX Memory Optimization Research</h3>
-        <p class="card-desc">Exploring memory optimization techniques for the MLX framework on Apple Silicon.</p>
+        <h3 data-i18n="card3.title">MLX Memory Optimization Research</h3>
+        <p class="card-desc" data-i18n="card3.desc">Exploring memory optimization techniques for the MLX framework on Apple Silicon.</p>
         <ul class="highlights">
-          <li>Up to 20x faster mmap loading</li>
-          <li>Zero-copy model loading</li>
-          <li>Comprehensive benchmarks</li>
+          <li data-i18n="card3.h1">Up to 20x faster mmap loading</li>
+          <li data-i18n="card3.h2">Zero-copy model loading</li>
+          <li data-i18n="card3.h3">Comprehensive benchmarks</li>
         </ul>
         <div class="card-links">
-          <a href="https://github.com/AtomGradient/OptMLX" target="_blank" rel="noopener">GitHub →</a>
-          <a href="https://atomgradient.github.io/OptMLX/" target="_blank" rel="noopener">Paper →</a>
+          <a href="https://github.com/AtomGradient/OptMLX" target="_blank" rel="noopener" data-i18n="link.github">GitHub →</a>
+          <a href="https://atomgradient.github.io/OptMLX/" target="_blank" rel="noopener" data-i18n="link.paper">Paper →</a>
         </div>
       </div>
 
@@ -387,25 +433,120 @@
 
   <!-- About -->
   <section id="about">
-    <h2 class="section-title">About</h2>
+    <h2 class="section-title" data-i18n="nav.about">About</h2>
     <div class="about-content">
-      <p>AtomGradient is an independent research group dedicated to making AI run efficiently on edge devices. We believe powerful AI should be private, accessible, and free from cloud dependency. All our research is open-source.</p>
-      <p>Our research powers <a href="https://www.echostream-ai.com/" target="_blank" rel="noopener" style="color: var(--gradient-start); font-weight: 600;">EchoStream AI</a> — a product line bringing on-device AI capabilities to real-world applications.</p>
+      <p data-i18n="about.p1">AtomGradient is an independent research group dedicated to making AI run efficiently on edge devices. We believe powerful AI should be private, accessible, and free from cloud dependency. All our research is open-source.</p>
+      <p data-i18n-html="about.p2">Our research powers <a href="https://www.echostream-ai.com/" target="_blank" rel="noopener" style="color: var(--gradient-start); font-weight: 600;">EchoStream AI</a> — a product line bringing on-device AI capabilities to real-world applications.</p>
       <div class="values">
-        <span class="value-tag">Edge AI</span>
-        <span class="value-tag">Privacy</span>
-        <span class="value-tag">Open Research</span>
+        <span class="value-tag" data-i18n="about.tag1">Edge AI</span>
+        <span class="value-tag" data-i18n="about.tag2">Privacy</span>
+        <span class="value-tag" data-i18n="about.tag3">Open Research</span>
       </div>
     </div>
   </section>
 
   <!-- Footer -->
   <footer>
-    <p>© 2026 AtomGradient · <a href="https://atomgradient.com/" target="_blank" rel="noopener">Official Site</a> · <a href="https://www.echostream-ai.com/" target="_blank" rel="noopener">EchoStream AI</a> · <a href="https://github.com/AtomGradient" target="_blank" rel="noopener">GitHub</a></p>
+    <p data-i18n-html="footer">© 2026 AtomGradient · <a href="https://atomgradient.com/" target="_blank" rel="noopener">Official Site</a> · <a href="https://www.echostream-ai.com/" target="_blank" rel="noopener">EchoStream AI</a> · <a href="https://github.com/AtomGradient" target="_blank" rel="noopener">GitHub</a></p>
   </footer>
 
   <script>
-    // Highlight active nav link on scroll
+    // --- i18n ---
+    const translations = {
+      en: {
+        'nav.research': 'Research',
+        'nav.products': 'Products',
+        'nav.about': 'About',
+        'hero.tagline': 'Bringing AI to the Edge',
+        'hero.desc': 'We focus on deploying AI models directly on consumer devices — making AI faster, private, and freely accessible to everyone.',
+        'card1.title': 'On-Device Text-to-Speech',
+        'card1.desc': 'Native Swift implementation of Qwen3 TTS 0.6B for real-time, on-device speech synthesis.',
+        'card1.h1': '67% model compression (2.35 GB → 808 MB)',
+        'card1.h2': 'Real-time synthesis (RTF 0.68x)',
+        'card1.h3': '12 languages supported',
+        'card2.title': 'On-Device Vision Language Model',
+        'card2.desc': 'Multi-stage compression pipeline for deploying Gemma 3 4B VLM on consumer hardware.',
+        'card2.h1': '25% model compression (2.8 GB → 2.1 GB)',
+        'card2.h2': '110 tok/s text generation',
+        'card2.h3': '3.4x image processing speedup',
+        'card3.title': 'MLX Memory Optimization Research',
+        'card3.desc': 'Exploring memory optimization techniques for the MLX framework on Apple Silicon.',
+        'card3.h1': 'Up to 20x faster mmap loading',
+        'card3.h2': 'Zero-copy model loading',
+        'card3.h3': 'Comprehensive benchmarks',
+        'about.p1': 'AtomGradient is an independent research group dedicated to making AI run efficiently on edge devices. We believe powerful AI should be private, accessible, and free from cloud dependency. All our research is open-source.',
+        'about.p2': 'Our research powers <a href="https://www.echostream-ai.com/" target="_blank" rel="noopener" style="color: var(--gradient-start); font-weight: 600;">EchoStream AI</a> — a product line bringing on-device AI capabilities to real-world applications.',
+        'about.tag1': 'Edge AI',
+        'about.tag2': 'Privacy',
+        'about.tag3': 'Open Research',
+        'link.github': 'GitHub →',
+        'link.paper': 'Paper →',
+        'footer': '© 2026 AtomGradient · <a href="https://atomgradient.com/" target="_blank" rel="noopener">Official Site</a> · <a href="https://www.echostream-ai.com/" target="_blank" rel="noopener">EchoStream AI</a> · <a href="https://github.com/AtomGradient" target="_blank" rel="noopener">GitHub</a>'
+      },
+      zh: {
+        'nav.research': '研究',
+        'nav.products': '产品',
+        'nav.about': '关于',
+        'hero.tagline': '让 AI 在终端绽放',
+        'hero.desc': '我们专注于将 AI 模型部署到消费级设备上——让 AI 更快、更私密，人人可用。',
+        'card1.title': '端侧文本转语音',
+        'card1.desc': '基于 Swift 原生实现的 Qwen3 TTS 0.6B，支持实时端侧语音合成。',
+        'card1.h1': '67% 模型压缩 (2.35 GB → 808 MB)',
+        'card1.h2': '实时合成 (RTF 0.68x)',
+        'card1.h3': '支持 12 种语言',
+        'card2.title': '端侧视觉语言模型',
+        'card2.desc': '多阶段压缩流水线，将 Gemma 3 4B VLM 部署到消费级硬件。',
+        'card2.h1': '25% 模型压缩 (2.8 GB → 2.1 GB)',
+        'card2.h2': '110 tok/s 文本生成',
+        'card2.h3': '3.4x 图像处理加速',
+        'card3.title': 'MLX 内存优化研究',
+        'card3.desc': '探索 MLX 框架在 Apple Silicon 上的内存优化技术。',
+        'card3.h1': '最高 20x mmap 加载加速',
+        'card3.h2': '零拷贝模型加载',
+        'card3.h3': '全面的性能基准测试',
+        'about.p1': 'AtomGradient 是一个独立研究团队，致力于让 AI 在边缘设备上高效运行。我们相信强大的 AI 应当是私密的、可及的、不依赖云端的。我们所有研究均开源。',
+        'about.p2': '我们的研究驱动了 <a href="https://www.echostream-ai.com/" target="_blank" rel="noopener" style="color: var(--gradient-start); font-weight: 600;">EchoStream AI</a>——一条将端侧 AI 能力带入实际应用的产品线。',
+        'about.tag1': '边缘 AI',
+        'about.tag2': '隐私',
+        'about.tag3': '开放研究',
+        'link.github': 'GitHub →',
+        'link.paper': '论文 →',
+        'footer': '© 2026 AtomGradient · <a href="https://atomgradient.com/" target="_blank" rel="noopener">官方网站</a> · <a href="https://www.echostream-ai.com/" target="_blank" rel="noopener">EchoStream AI</a> · <a href="https://github.com/AtomGradient" target="_blank" rel="noopener">GitHub</a>'
+      }
+    };
+
+    function setLang(lang) {
+      document.documentElement.lang = lang;
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (translations[lang][key]) {
+          el.textContent = translations[lang][key];
+        }
+      });
+      document.querySelectorAll('[data-i18n-html]').forEach(el => {
+        const key = el.getAttribute('data-i18n-html');
+        if (translations[lang][key]) {
+          el.innerHTML = translations[lang][key];
+        }
+      });
+      document.querySelectorAll('.lang-switcher button').forEach(btn => {
+        btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
+      });
+      localStorage.setItem('lang', lang);
+    }
+
+    // Detect initial language
+    (function() {
+      const saved = localStorage.getItem('lang');
+      if (saved) {
+        setLang(saved);
+      } else {
+        const browserLang = navigator.language || navigator.userLanguage || 'en';
+        setLang(browserLang.startsWith('zh') ? 'zh' : 'en');
+      }
+    })();
+
+    // --- Highlight active nav link on scroll ---
     const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
 
