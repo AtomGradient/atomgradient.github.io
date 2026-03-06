@@ -428,6 +428,22 @@
         </div>
       </div>
 
+      <!-- Card 4 -->
+      <div class="card">
+        <span class="card-label">hybrid-ane-mlx-bench</span>
+        <h3 data-i18n="card4.title">Disaggregated LLM Inference on Apple Silicon</h3>
+        <p class="card-desc" data-i18n="card4.desc">Benchmarking CoreML ANE prefill + MLX GPU decode for Qwen3.5 on Apple Silicon, with four inference strategies compared.</p>
+        <ul class="highlights">
+          <li data-i18n="card4.h1">ANE prefill matches GPU at ~410 tokens</li>
+          <li data-i18n="card4.h2">282x GPU power reduction during prefill</li>
+          <li data-i18n="card4.h3">4 inference pipelines benchmarked</li>
+        </ul>
+        <div class="card-links">
+          <a href="https://github.com/AtomGradient/hybrid-ane-mlx-bench" target="_blank" rel="noopener" data-i18n="link.github">GitHub →</a>
+          <a href="https://atomgradient.github.io/hybrid-ane-mlx-bench/" target="_blank" rel="noopener" data-i18n="link.paper">Paper →</a>
+        </div>
+      </div>
+
     </div>
   </section>
 
@@ -474,6 +490,11 @@
         'card3.h1': 'Up to 20x faster mmap loading',
         'card3.h2': 'Zero-copy model loading',
         'card3.h3': 'Comprehensive benchmarks',
+        'card4.title': 'Disaggregated LLM Inference on Apple Silicon',
+        'card4.desc': 'Benchmarking CoreML ANE prefill + MLX GPU decode for Qwen3.5 on Apple Silicon, with four inference strategies compared.',
+        'card4.h1': 'ANE prefill matches GPU at ~410 tokens',
+        'card4.h2': '282x GPU power reduction during prefill',
+        'card4.h3': '4 inference pipelines benchmarked',
         'about.p1': 'AtomGradient is an independent research group dedicated to making AI run efficiently on edge devices. We believe powerful AI should be private, accessible, and free from cloud dependency. All our research is open-source.',
         'about.p2': 'Our research powers <a href="https://www.echostream-ai.com/" target="_blank" rel="noopener" style="color: var(--gradient-start); font-weight: 600;">EchoStream AI</a> — a product line bringing on-device AI capabilities to real-world applications.',
         'about.tag1': 'Edge AI',
@@ -504,6 +525,11 @@
         'card3.h1': '最高 20x mmap 加载加速',
         'card3.h2': '零拷贝模型加载',
         'card3.h3': '全面的性能基准测试',
+        'card4.title': 'Apple Silicon 上的分离式 LLM 推理',
+        'card4.desc': '基准测试 CoreML ANE 预填充 + MLX GPU 解码，在 Apple Silicon 上对比四种 Qwen3.5 推理策略。',
+        'card4.h1': 'ANE 预填充在约 410 token 处追平 GPU',
+        'card4.h2': '预填充阶段 GPU 功耗降低 282 倍',
+        'card4.h3': '4 种推理管线全面基准测试',
         'about.p1': 'AtomGradient 是一个独立研究团队，致力于让 AI 在边缘设备上高效运行。我们相信强大的 AI 应当是私密的、可及的、不依赖云端的。我们所有研究均开源。',
         'about.p2': '我们的研究驱动了 <a href="https://www.echostream-ai.com/" target="_blank" rel="noopener" style="color: var(--gradient-start); font-weight: 600;">EchoStream AI</a>——一条将端侧 AI 能力带入实际应用的产品线。',
         'about.tag1': '边缘 AI',
