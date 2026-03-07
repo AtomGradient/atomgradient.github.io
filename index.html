@@ -380,6 +380,22 @@
     <h2 class="section-title" data-i18n="nav.research">Research</h2>
     <div class="cards">
 
+      <!-- Card 5 — ANE Batch Prefill -->
+      <div class="card">
+        <span class="card-label">hybird-batch-prefill-on-ane</span>
+        <h3 data-i18n="card5.title">ANE Batch Prefill for On-Device Parallel LLM Inference</h3>
+        <p class="card-desc" data-i18n="card5.desc">Fused matrix-vector kernels enabling concurrent ANE batch prefill + GPU decode on Apple Silicon for Qwen3.5 models.</p>
+        <ul class="highlights">
+          <li data-i18n="card5.h1">11.3x ANE batch prefill speedup (268 tok/s)</li>
+          <li data-i18n="card5.h2">79% power reduction for prefill component</li>
+          <li data-i18n="card5.h3">&lt;30 ms state transfer overhead</li>
+        </ul>
+        <div class="card-links">
+          <a href="https://github.com/AtomGradient/hybird-batch-prefill-on-ane" target="_blank" rel="noopener" data-i18n="link.github">GitHub →</a>
+          <a href="https://atomgradient.github.io/hybird-batch-prefill-on-ane/" target="_blank" rel="noopener" data-i18n="link.paper">Paper →</a>
+        </div>
+      </div>
+
       <!-- Card 1 -->
       <div class="card">
         <span class="card-label">hybrid-ane-mlx-bench</span>
@@ -475,6 +491,11 @@
         'nav.about': 'About',
         'hero.tagline': 'Bringing AI to the Edge',
         'hero.desc': 'We focus on deploying AI models directly on consumer devices — making AI faster, private, and freely accessible to everyone.',
+        'card5.title': 'ANE Batch Prefill for On-Device Parallel LLM Inference',
+        'card5.desc': 'Fused matrix-vector kernels enabling concurrent ANE batch prefill + GPU decode on Apple Silicon for Qwen3.5 models.',
+        'card5.h1': '11.3x ANE batch prefill speedup (268 tok/s)',
+        'card5.h2': '79% power reduction for prefill component',
+        'card5.h3': '<30 ms state transfer overhead',
         'card1.title': 'Disaggregated LLM Inference on Apple Silicon',
         'card1.desc': 'Benchmarking CoreML ANE prefill + MLX GPU decode for Qwen3.5 on Apple Silicon, with four inference strategies compared.',
         'card1.h1': 'ANE prefill matches GPU at ~410 tokens',
@@ -510,6 +531,11 @@
         'nav.about': '关于',
         'hero.tagline': '让 AI 在终端绽放',
         'hero.desc': '我们专注于将 AI 模型部署到消费级设备上——让 AI 更快、更私密，人人可用。',
+        'card5.title': 'ANE 批量预填充：端侧并行 LLM 推理',
+        'card5.desc': '融合矩阵-向量内核，在 Apple Silicon 上实现 ANE 批量预填充与 GPU 解码并行运行，适用于 Qwen3.5 模型。',
+        'card5.h1': 'ANE 批量预填充 11.3 倍加速 (268 tok/s)',
+        'card5.h2': '预填充组件功耗降低 79%',
+        'card5.h3': '状态迁移开销 <30 ms',
         'card1.title': 'Apple Silicon 上的分离式 LLM 推理',
         'card1.desc': '基准测试 CoreML ANE 预填充 + MLX GPU 解码，在 Apple Silicon 上对比四种 Qwen3.5 推理策略。',
         'card1.h1': 'ANE 预填充在约 410 token 处追平 GPU',
