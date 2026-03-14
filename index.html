@@ -380,6 +380,22 @@
     <h2 class="section-title" data-i18n="nav.research">Research</h2>
     <div class="cards">
 
+      <!-- Card 7 — Apple Silicon LLM Inference -->
+      <div class="card">
+        <span class="card-label">apple-silicon-llm-inference</span>
+        <h3 data-i18n="card7.title">Efficient On-Device LLM Inference on Apple Silicon: From Quantization to Speculative Decoding</h3>
+        <p class="card-desc" data-i18n="card7.desc">Systematic benchmarking of 7 GGUF quantization levels and speculative decoding for Qwen3.5 on three Apple Silicon machines, establishing Q6_K as the Pareto-optimal choice and a ≥2.5× draft/target speed ratio as the SD viability rule.</p>
+        <ul class="highlights">
+          <li data-i18n="card7.h1">Q6_K Pareto-optimal: 1.68× faster, 59% smaller, 0.54% PPL loss</li>
+          <li data-i18n="card7.h2">+25.7% throughput via speculative decoding (0.8B→9B, k=4)</li>
+          <li data-i18n="card7.h3">GGML_RPC cross-device SD: 79% overhead — not production-viable</li>
+        </ul>
+        <div class="card-links">
+          <a href="https://github.com/AtomGradient/apple-silicon-llm-inference" target="_blank" rel="noopener" data-i18n="link.github">GitHub →</a>
+          <a href="https://atomgradient.github.io/apple-silicon-llm-inference/" target="_blank" rel="noopener" data-i18n="link.paper">Paper →</a>
+        </div>
+      </div>
+
       <!-- Card 6 — Prism -->
       <div class="card">
         <span class="card-label">Prism</span>
@@ -507,6 +523,11 @@
         'nav.about': 'About',
         'hero.tagline': 'Bringing AI to the Edge',
         'hero.desc': 'We focus on deploying AI models directly on consumer devices — making AI faster, private, and freely accessible to everyone.',
+        'card7.title': 'Efficient On-Device LLM Inference on Apple Silicon: From Quantization to Speculative Decoding',
+        'card7.desc': 'Systematic benchmarking of 7 GGUF quantization levels and speculative decoding for Qwen3.5 on three Apple Silicon machines, establishing Q6_K as the Pareto-optimal choice and a ≥2.5× draft/target speed ratio as the SD viability rule.',
+        'card7.h1': 'Q6_K Pareto-optimal: 1.68× faster, 59% smaller, 0.54% PPL loss',
+        'card7.h2': '+25.7% throughput via speculative decoding (0.8B→9B, k=4)',
+        'card7.h3': 'GGML_RPC cross-device SD: 79% overhead — not production-viable',
         'card6.title': 'Cross-Domain Personal Data Integration on Consumer Hardware',
         'card6.desc': 'Integrating finance, diet, mood, and reading data entirely on consumer Apple Silicon, producing emergent cross-domain insights with zero data leakage.',
         'card6.h1': '1.48x cross-domain insight emergence (IIR)',
@@ -552,6 +573,11 @@
         'nav.about': '关于',
         'hero.tagline': '让 AI 在终端绽放',
         'hero.desc': '我们专注于将 AI 模型部署到消费级设备上——让 AI 更快、更私密，人人可用。',
+        'card7.title': 'Apple Silicon 端侧 LLM 推理：从量化到投机解码',
+        'card7.desc': '对 Qwen3.5 在三台 Apple Silicon 设备上的 7 种 GGUF 量化级别和投机解码进行系统性基准测试，确立 Q6_K 为 Pareto 最优选择，≥2.5× 草稿/目标速比为 SD 可行性阈值。',
+        'card7.h1': 'Q6_K Pareto 最优：速度提升 1.68 倍，体积缩小 59%，PPL 损失 0.54%',
+        'card7.h2': '投机解码吞吐量提升 +25.7%（0.8B→9B，k=4）',
+        'card7.h3': 'GGML_RPC 跨设备 SD：79% 开销——不适合生产部署',
         'card6.title': '消费级硬件上的跨域个人数据整合',
         'card6.desc': '在消费级 Apple Silicon 上整合财务、饮食、情绪和阅读数据，产生涌现式跨域洞察，零数据泄漏。',
         'card6.h1': '1.48x 跨域洞察涌现增量 (IIR)',
