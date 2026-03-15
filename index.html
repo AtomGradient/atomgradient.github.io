@@ -380,6 +380,22 @@
     <h2 class="section-title" data-i18n="nav.research">Research</h2>
     <div class="cards">
 
+      <!-- Card 8 — Speculative Decoding on MoE -->
+      <div class="card">
+        <span class="card-label">speculative-moe-research</span>
+        <h3 data-i18n="card8.title">Does Speculative Decoding Help Mixture-of-Experts?</h3>
+        <p class="card-desc" data-i18n="card8.desc">306-run empirical study on Qwen3.5-35B-A3B MoE with Apple M2 Ultra. SD provides 1.18–1.30× speedup despite &lt;4% acceptance through batch verification amortization of memory bandwidth.</p>
+        <ul class="highlights">
+          <li data-i18n="card8.h1">1.30× MoE speedup (0.8B draft, γ=16, &lt;0.2% acceptance)</li>
+          <li data-i18n="card8.h2">Speedup scales with total params, not active params</li>
+          <li data-i18n="card8.h3">New mechanism: batch verification amortization</li>
+        </ul>
+        <div class="card-links">
+          <a href="https://github.com/AtomGradient/speculative-moe-research" target="_blank" rel="noopener" data-i18n="link.github">GitHub →</a>
+          <a href="https://atomgradient.github.io/speculative-moe-research/" target="_blank" rel="noopener" data-i18n="link.paper">Paper →</a>
+        </div>
+      </div>
+
       <!-- Card 7 — Apple Silicon LLM Inference -->
       <div class="card">
         <span class="card-label">apple-silicon-llm-inference</span>
@@ -523,6 +539,11 @@
         'nav.about': 'About',
         'hero.tagline': 'Bringing AI to the Edge',
         'hero.desc': 'We focus on deploying AI models directly on consumer devices — making AI faster, private, and freely accessible to everyone.',
+        'card8.title': 'Does Speculative Decoding Help Mixture-of-Experts?',
+        'card8.desc': '306-run empirical study on Qwen3.5-35B-A3B MoE with Apple M2 Ultra. SD provides 1.18–1.30× speedup despite <4% acceptance through batch verification amortization of memory bandwidth.',
+        'card8.h1': '1.30× MoE speedup (0.8B draft, γ=16, <0.2% acceptance)',
+        'card8.h2': 'Speedup scales with total params, not active params',
+        'card8.h3': 'New mechanism: batch verification amortization',
         'card7.title': 'Efficient On-Device LLM Inference on Apple Silicon: From Quantization to Speculative Decoding',
         'card7.desc': 'Systematic benchmarking of 7 GGUF quantization levels and speculative decoding for Qwen3.5 on three Apple Silicon machines, establishing Q6_K as the Pareto-optimal choice and a ≥2.5× draft/target speed ratio as the SD viability rule.',
         'card7.h1': 'Q6_K Pareto-optimal: 1.68× faster, 59% smaller, 0.54% PPL loss',
@@ -573,6 +594,11 @@
         'nav.about': '关于',
         'hero.tagline': '让 AI 在终端绽放',
         'hero.desc': '我们专注于将 AI 模型部署到消费级设备上——让 AI 更快、更私密，人人可用。',
+        'card8.title': '推测解码对混合专家模型有帮助吗？',
+        'card8.desc': '在 Apple M2 Ultra 上对 Qwen3.5-35B-A3B MoE 进行 306 次实验。尽管接受率低于 4%，SD 通过批量验证摊销内存带宽实现 1.18–1.30× 加速。',
+        'card8.h1': '1.30× MoE 加速（0.8B 草稿，γ=16，接受率 <0.2%）',
+        'card8.h2': '加速与总参数量成正比，而非活跃参数量',
+        'card8.h3': '新机制：批量验证摊销',
         'card7.title': 'Apple Silicon 端侧 LLM 推理：从量化到投机解码',
         'card7.desc': '对 Qwen3.5 在三台 Apple Silicon 设备上的 7 种 GGUF 量化级别和投机解码进行系统性基准测试，确立 Q6_K 为 Pareto 最优选择，≥2.5× 草稿/目标速比为 SD 可行性阈值。',
         'card7.h1': 'Q6_K Pareto 最优：速度提升 1.68 倍，体积缩小 59%，PPL 损失 0.54%',
