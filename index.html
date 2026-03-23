@@ -387,22 +387,6 @@
         </div>
       </div>
 
-      <!-- Card 9 — H₂O KV Cache Eviction -->
-      <div class="card">
-        <span class="card-label">H2OAttnScore</span>
-        <h3 data-i18n="card9.title">H₂O Attention Score KV Cache Eviction for On-Device LLM Inference</h3>
-        <p class="card-desc" data-i18n="card9.desc">Full-stack H₂O KV cache eviction in Apple's MLX framework via modified Metal SDPA kernels. Zero-overhead score export enables 2–3× better quality retention than sliding-window eviction at identical memory budgets.</p>
-        <ul class="highlights">
-          <li data-i18n="card9.h1">2–3× better quality retention vs sliding-window at same memory budget</li>
-          <li data-i18n="card9.h2">Only +0.9–1.5% PPL vs unlimited baseline (rotating: +2.7–3.5%)</li>
-          <li data-i18n="card9.h3">&lt;0.3% throughput overhead, zero additional FLOPs</li>
-        </ul>
-        <div class="card-links">
-          <a href="https://github.com/AtomGradient/H2OAttnScore" target="_blank" rel="noopener" data-i18n="link.github">GitHub →</a>
-          <a href="https://atomgradient.github.io/H2OAttnScore/" target="_blank" rel="noopener" data-i18n="link.paper">Paper →</a>
-        </div>
-      </div>
-
       <!-- Card 8 — Speculative Decoding on MoE -->
       <div class="card">
         <span class="card-label">speculative-moe-research</span>
@@ -562,11 +546,6 @@
         'nav.about': 'About',
         'hero.tagline': 'Bringing AI to the Edge',
         'hero.desc': 'We focus on deploying AI models directly on consumer devices — making AI faster, private, and freely accessible to everyone.',
-        'card9.title': 'H₂O Attention Score KV Cache Eviction for On-Device LLM Inference',
-        'card9.desc': 'Full-stack H₂O KV cache eviction in Apple\'s MLX framework via modified Metal SDPA kernels. Zero-overhead score export enables 2–3× better quality retention than sliding-window eviction at identical memory budgets.',
-        'card9.h1': '2–3× better quality retention vs sliding-window at same memory budget',
-        'card9.h2': 'Only +0.9–1.5% PPL vs unlimited baseline (rotating: +2.7–3.5%)',
-        'card9.h3': '<0.3% throughput overhead, zero additional FLOPs',
         'card8.title': 'Does Speculative Decoding Help Mixture-of-Experts?',
         'card8.desc': '306-run empirical study on Qwen3.5-35B-A3B MoE with Apple M2 Ultra. SD provides 1.18–1.30× speedup despite <4% acceptance through batch verification amortization of memory bandwidth.',
         'card8.h1': '1.30× MoE speedup (0.8B draft, γ=16, <0.2% acceptance)',
@@ -627,11 +606,6 @@
         'card10.h1': '60–88% 内存减少：27B 模型仅需 1.7 GB 峰值内存',
         'card10.h2': '9B-6bit 在 8GB iPad 上 OOM 证明流式加载的必要性',
         'card10.h3': 'iPad/iPhone TPS 比值 = 1.92x 完美匹配 2x 带宽比',
-        'card9.title': 'H₂O 注意力分数 KV 缓存淘汰：端侧 LLM 推理',
-        'card9.desc': '在 Apple MLX 框架中通过修改 Metal SDPA 内核实现完整的 H₂O KV 缓存淘汰。零开销分数导出实现在相同内存预算下比滑动窗口淘汰好 2–3 倍的质量保持。',
-        'card9.h1': '相同内存预算下质量保持比滑动窗口好 2–3 倍',
-        'card9.h2': '相比无限基线仅 +0.9–1.5% PPL（滑动窗口 +2.7–3.5%）',
-        'card9.h3': '吞吐量开销 <0.3%，零额外浮点运算',
         'card8.title': '推测解码对混合专家模型有帮助吗？',
         'card8.desc': '在 Apple M2 Ultra 上对 Qwen3.5-35B-A3B MoE 进行 306 次实验。尽管接受率低于 4%，SD 通过批量验证摊销内存带宽实现 1.18–1.30× 加速。',
         'card8.h1': '1.30× MoE 加速（0.8B 草稿，γ=16，接受率 <0.2%）',
