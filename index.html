@@ -360,8 +360,16 @@
 
       .nav-links {
         gap: 0.85rem;
+        flex: 1 1 auto;
+        min-width: 0;
+        margin: 0 0.75rem;
+        overflow-x: auto;
         flex-wrap: nowrap;
+        scrollbar-width: none;
+        -webkit-overflow-scrolling: touch;
       }
+      .nav-links::-webkit-scrollbar { display: none; }
+      .nav-logo, .lang-switcher { flex: none; }
 
       .nav-links a {
         font-size: 0.85rem;
